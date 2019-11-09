@@ -1,61 +1,64 @@
 <resources>
-    <string name="app_name">BusTrack</string>
+    <string name="app_name">Rumbos</string>
     <string name="gps_dialog_title">GPS...</string>
-    <string name="gps_enable_message"><![CDATA[El GPS no está habilitado, habilítelo en la siguiente ventana<br>]]></string>
-    <string name="username">Username/Email</string>
-    <string name="password">Password</string>
-    <string name="toggle_login_signin">¿Nuevo aquí? Regístrate</string>
-    <string name="login">Ingresar</string>
-    <string name="new_here_question"><![CDATA[¿Nuevo aquí? Regístrate >]]></string>
-    <string name="right_arrow">Flecha correcta</string>
-    <string name="error_email_required">Correo electronico requerido</string>
-    <string name="error_password_required">La contraseña puede estar vacia</string>
+    <string name="gps_enable_message"><![CDATA[GPS no esta activo, por favor hacepta los permisos en la ventana siguiente.<br>]]></string>
+    <string name="username">Nombre Usuario/Correo</string>
+    <string name="password">Contraseña</string>
+    <string name="toggle_login_signin">Nuevo por aqui?, Registrarce!</string>
+    <string name="login">Inicio de Sesion</string>
+    <string name="new_here_question"><![CDATA[Nuevo por aqui? Registrarce! >]]></string>
+    <string name="right_arrow">Flecha Derecha</string>
+    <string name="error_email_required">El Email es Necesario</string>
+    <string name="error_password_required">La COntraseña no debe estar Vacia</string>
 
     <string-array name="choose">
-        <item>Conductor</item>
+        <item>Conductor Bus</item>
         <item>Pasajero</item>
     </string-array>
     <string name="title_activity_login2">Registrarse</string>
 
     <!-- Cadenas relacionadas con el inicio de sesión -->
-    <string name="prompt_email">Email</string>
+    <string name="prompt_email">Correo</string>
     <string name="prompt_password">Contraseña (opcional)</string>
-    <string name="action_sign_in">Ingresa o Registro</string>
+    <string name="action_sign_in">Ingresa o Registrate</string>
     <string name="action_sign_in_short">Registrarse</string>
-    <string name="error_invalid_email">Esta dirección de correo electrónico no es válida.</string>
-    <string name="error_invalid_password">Esta contraseña es muy corta</string>
-    <string name="error_incorrect_password">Esta contraseña es incorrecta</string>
-    <string name="error_field_required">Este campo es requerido</string>
-    <string name="permission_rationale">"Se necesitan permisos de contactos para proporcionar correo electrónico"</string>
+    <string name="error_invalid_email">Este correo electronico es invalido</string>
+    <string name="error_invalid_password">La contraseña es demaciado corta</string>
+    <string name="error_incorrect_password">La contraseña es incorrecta</string>
+    <string name="error_field_required">Este campo es obligatorio</string>
+    <string name="permission_rationale">"Se necesitan permisos de contactos para el correo electronico"
+    </string>
     <string name="register">Registrar</string>
-    <string name="title_activity_driver_maps">Mapa</string>
-    <string name="title_activity_student_maps">Mapa</string>
-    <string name="get_eta">Get ETA</string>
-    <string name="ReadyToGo">Listo para ir</string>
-    <string name="logout">Cerrar sesión</string>
-    <string name="request_wait">Solicitar espera</string>
-    <string name="isDriver">is_driver</string>
-    <string name="locate_bus">Encuentra el autobús más cercano</string>
-    <string name="selectBusTitle">¿Cuál es tu autobús?</string>
+    <string name="title_activity_driver_maps">Map</string>
+    <string name="title_activity_student_maps">Map</string>
+    <string name="get_eta">Calcular Tiempo Distancia</string>
+    <string name="ReadyToGo">Listo para viajar</string>
+    <string name="logout">Cerrar Sesion</string>
+    <string name="request_wait">Solicitar Parada</string>
+    <string name="isDriver">Es_Busero</string>
+    <string name="locate_bus">Buscar Bus Cercano</string>
+    <string name="selectBusTitle">Que bus Abordas?</string>
     <string name="ok">OK</string>
-    <string name="LOGO">Logo</string>
-    <string name="Link_bus">Bus de enlace</string>
+        <string name="LOGO">Logo</string>
+    <string name="Link_bus">Seguir Bus</string>
 
-    <string name="drawer_open">Open navigation drawer</string>
-    <string name="drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Abir la ventana de navegador</string>
+    <string name="drawer_close">Cerrar ventana de navegacion</string>
     <string name="student_maps_first_time_launch">student_maps_first_time_launch</string>
     <string name="bus_no">bus_no</string>
     <string name="channel_name">channel_01</string>
     <string name="enable_gps">Enable GPS</string>
     <string name="cancel">Cancel</string>
-    <string name="channel_description">Canal de notificación para mostrar notificaciones de espera de pasajeros.</string>
-    <string name="request_wait_notification">Un estudiante cercano te pide que esperes.</string>
-    <string name="launched_via_notification">iniciar mediante notificación</string>
+    <string name="channel_description">Notificattion channel for showing notificaiton for waiting reqeust from students.</string>
+    <string name="request_wait_notification">A student nearby is requesting you to wait.</string>
+    <string name="launched_via_notification">launch_via_notification</string>
+    <string name="nombre">nombre</string>
+    <string name="imagen_01">IMAGEN</string>
 
     <string-array name="bus_numbers">
-        <item>Jinotepe-Managua</item>
-        <item>Rivas-Managua</item>
-        <item>Masaya-Managua</item>
-        <item>Diriamba-Managua</item>
+        <item>2</item>
+        <item>8</item>
+        <item>11</item>
+        <item>23</item>
     </string-array>
 </resources>
