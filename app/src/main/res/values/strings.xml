@@ -30,7 +30,7 @@
         completions."
         
     </string>
-    <string name="register">Register</string>
+    <string name="register">Registrar</string>
     <string name="title_activity_driver_maps">Map</string>
     <string name="title_activity_student_maps">Map</string>
     <string name="get_eta">Get ETA</string>
