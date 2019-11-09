@@ -9,9 +9,7 @@
     android:background="#FFFFFF"
     tools:context="com.crafters.rumbos.activity_login" >
 
-    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
@@ -30,8 +28,8 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="155dp"
-                android:scaleType="centerCrop"
                 android:layout_gravity="center_horizontal"
+                android:scaleType="fitCenter"
                 android:src="@drawable/ic_rumbobus" />
 
             <android.support.design.widget.TextInputLayout
@@ -98,7 +96,7 @@
                 android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:background="#0D47A1"
+                android:background="@drawable/button_background_blue"
                 android:text="@string/login"
 
                 android:textColor="#FFFFFF" />
@@ -109,7 +107,7 @@
                 android:layout_height="45dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:background="#0D47A1"
+                android:background="@drawable/button_background_blue"
                 android:text="@string/register"
 
                 android:textColor="#FFFFFF" />
