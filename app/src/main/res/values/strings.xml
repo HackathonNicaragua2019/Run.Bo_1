@@ -35,15 +35,15 @@
     <string name="ReadyToGo">Listo para viajar</string>
     <string name="logout">Cerrar Sesion</string>
     <string name="request_wait">Solicitar Parada</string>
-    <string name="isDriver">Es_Bus</string>
-    <string name="locate_bus">Find nearest bus</string>
-    <string name="selectBusTitle">Whats your bus no?</string>
+    <string name="isDriver">Es_Busero</string>
+    <string name="locate_bus">Buscar Bus Cercano</string>
+    <string name="selectBusTitle">Que bus Abordas?</string>
     <string name="ok">OK</string>
         <string name="LOGO">Logo</string>
-    <string name="Link_bus">Link Bus</string>
+    <string name="Link_bus">Seguir Bus</string>
 
-    <string name="drawer_open">Open navigation drawer</string>
-    <string name="drawer_close">Close navigation drawer</string>
+    <string name="drawer_open">Abir la ventana de navegador</string>
+    <string name="drawer_close">Cerrar ventana de navegacion</string>
     <string name="student_maps_first_time_launch">student_maps_first_time_launch</string>
     <string name="bus_no">bus_no</string>
     <string name="channel_name">channel_01</string>
