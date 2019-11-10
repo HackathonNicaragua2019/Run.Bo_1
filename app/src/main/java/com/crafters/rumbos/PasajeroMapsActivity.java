@@ -362,7 +362,7 @@ public class PasajeroMapsActivity extends AppCompatActivity implements OnMapRead
                         editor.remove(getString(R.string.bus_no));
                         editor.commit();
 
-                        Intent intent = new Intent(PasajeroMapsActivity.this, activity_login.class);
+                        Intent intent = new Intent(PasajeroMapsActivity.this, Activity_Login.class);
                         startActivity(intent);
                         finish();
                         break;

@@ -43,7 +43,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-public class activity_login extends AppCompatActivity {
+public class Activity_Login extends AppCompatActivity {
 
     private CoordinatorLayout coordinatorLayout;
     private AnimationDrawable animationDrawable;
@@ -63,7 +63,7 @@ public class activity_login extends AppCompatActivity {
 
     private TextInputEditText emailInput;
     private TextInputEditText passwordInput;
-    public static final String LOG_TAG = activity_login.class.getSimpleName();
+    public static final String LOG_TAG = Activity_Login.class.getSimpleName();
     private int bus_num = 0;
 
     //Firebase Utils
@@ -95,7 +95,7 @@ public class activity_login extends AppCompatActivity {
         if (nInfo != null && nInfo.isConnected()) {
 
         } else {
-            AlertDialog.Builder a_builder = new AlertDialog.Builder(activity_login.this);
+            AlertDialog.Builder a_builder = new AlertDialog.Builder(Activity_Login.this);
             a_builder.setMessage("Por Favor Habilita la Conexion a Internet!!!")
                     .setCancelable(false)
                     .setPositiveButton("Configuracion", new DialogInterface.OnClickListener() {
@@ -133,7 +133,7 @@ public class activity_login extends AppCompatActivity {
         animationDrawable.setExitFadeDuration (2000);
 */
 
-        mProgress = new ProgressDialog(activity_login.this, R.style.AppTheme_Dark_Dialog);
+        mProgress = new ProgressDialog(Activity_Login.this, R.style.AppTheme_Dark_Dialog);
         mProgress.setMessage("Verificando...");
         mProgress.setCancelable(false);
         mProgress.setIndeterminate(true);
@@ -192,11 +192,11 @@ public class activity_login extends AppCompatActivity {
                editor.commit();
            }
 
-           mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(activity_login.this, new OnCompleteListener<AuthResult>() {
+           mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(Activity_Login.this, new OnCompleteListener<AuthResult>() {
                @Override
                public void onComplete(@NonNull Task<AuthResult> task) {
                    if (!task.isSuccessful()){
-                       Toast.makeText(activity_login.this, "Error Inicio Sesion", Toast.LENGTH_SHORT).show();
+                       Toast.makeText(Activity_Login.this, "Error Inicio Sesion", Toast.LENGTH_SHORT).show();
                    }
                }
            });
@@ -225,12 +225,12 @@ public class activity_login extends AppCompatActivity {
             editor.commit();
         }
 
-        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(activity_login.this, new OnCompleteListener<AuthResult>() {
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(Activity_Login.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (!task.isSuccessful()) {
 
-                    Toast.makeText(activity_login.this, "\n" + "¡Error de registro!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity_Login.this, "\n" + "¡Error de registro!", Toast.LENGTH_SHORT).show();
                 } else {
                     String user_id = mAuth.getCurrentUser().getUid();
 
