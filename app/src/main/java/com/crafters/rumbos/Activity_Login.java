@@ -146,18 +146,20 @@ public class activity_login extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     Boolean ut = getPreferences(Context.MODE_PRIVATE).getBoolean(getString(R.string.isDriver), false);
-                    if (ut){
-                        //Intent intent = new Intent(activity_login.this, DriverMapsActivity.class);
-                        //startActivity(intent);
+                    if (ut) {
+                        Intent intent = new Intent(activity_login.this, activity_conductor_maps.class);
+                        startActivity(intent);
                         finish();
-                    }else{
-                        //Intent intent = new Intent(activity_login.this, StudentMapasActivity.class);
-                        //startActivity(intent);
-                        //finish();
+                    } else {
+                        Intent intent = new Intent(activity_login.this, PasajeroMapsActivity.class);
+                        startActivity(intent);
+                        finish();
                     }
                 }
             }
+
         };
+
 
 //        switchToSignUp.setOnClickListener(new View.OnClickListener() {
 //            @Override
