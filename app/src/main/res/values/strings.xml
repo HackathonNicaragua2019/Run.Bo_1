@@ -39,7 +39,7 @@
     <string name="locate_bus">Buscar Bus Cercano</string>
     <string name="selectBusTitle">Que bus Abordas?</string>
     <string name="ok">OK</string>
-        <string name="LOGO">Logo</string>
+    <string name="LOGO">Logo</string>
     <string name="Link_bus">Seguir Bus</string>
 
     <string name="drawer_open">Abir la ventana de navegador</string>
@@ -61,4 +61,5 @@
         <item>11</item>
         <item>23</item>
     </string-array>
+    <string name="title_activity_maps">Map</string>
 </resources>

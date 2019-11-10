@@ -26,7 +26,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.aditya.bustrack.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -49,6 +48,7 @@ public class activity_login extends AppCompatActivity {
     private CoordinatorLayout coordinatorLayout;
     private AnimationDrawable animationDrawable;
 
+    //Declaraciones de Variables. llaman a las cajas de textos
     @BindView(R.id.text_input_layout_email)
     TextInputLayout emailWrapper;
     @BindView(R.id.text_input_layout_password)
@@ -77,6 +77,7 @@ public class activity_login extends AppCompatActivity {
         mAuth.removeAuthStateListener(mAuthStateListener);
     }
 
+    //Metodo de inicio
     @Override
     protected void onStart() {
         super.onStart();
