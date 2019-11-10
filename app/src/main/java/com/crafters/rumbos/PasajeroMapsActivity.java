@@ -61,7 +61,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class StudentMapsActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
+public class PasajeroMapsActivity extends AppCompatActivity implements OnMapReadyCallback, GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     @BindView(R.id.toolbar)
@@ -73,7 +73,7 @@ public class StudentMapsActivity extends AppCompatActivity implements OnMapReady
     @BindView(R.id.locate_bus_fab)
     FloatingActionButton locateBus;
 
-    public static final String LOG_TAG = StudentMapsActivity.class.getSimpleName();
+    public static final String LOG_TAG = PasajeroMapsActivity.class.getSimpleName();
     private static final int RC_PER = 2;
 
     private GoogleMap mMap;
@@ -132,7 +132,7 @@ public class StudentMapsActivity extends AppCompatActivity implements OnMapReady
         boolean firstTime = prefs.getBoolean(getString(R.string.student_maps_first_time_launch), true);
         if (firstTime) {
 
-            AlertDialog.Builder metadialogBuilder = new AlertDialog.Builder(StudentMapsActivity.this);
+            AlertDialog.Builder metadialogBuilder = new AlertDialog.Builder(PasajeroMapsActivity.this);
             metadialogBuilder.setTitle(getString(R.string.selectBusTitle))
                     .setItems(R.array.bus_numbers, new DialogInterface.OnClickListener() {
                         @Override
@@ -196,9 +196,9 @@ public class StudentMapsActivity extends AppCompatActivity implements OnMapReady
         locateBus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(StudentMapsActivity.this, "Aye aye captain!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PasajeroMapsActivity.this, "Aye aye captain!", Toast.LENGTH_SHORT).show();
                 if (busDriverKey.isEmpty()){
-                    Toast.makeText(StudentMapsActivity.this, "Sorry, Your driver is not online!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(PasajeroMapsActivity.this, "Sorry, Your driver is not online!", Toast.LENGTH_LONG).show();
                     return;
                 }
                 DatabaseReference busLocation = FirebaseDatabase.getInstance().getReference().child("driver_available").child(busDriverKey).child("l");
@@ -249,7 +249,7 @@ public class StudentMapsActivity extends AppCompatActivity implements OnMapReady
                         break;
                     case R.id.request_wait:
                         if (prefs.getInt(getString(R.string.bus_no), 0)==0){
-                            Toast.makeText(StudentMapsActivity.this, "Please link your bus first!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(PasajeroMapsActivity.this, "Please link your bus first!", Toast.LENGTH_LONG).show();
                             break;
                         }
                         spinner.setVisibility(View.VISIBLE);
@@ -260,11 +260,11 @@ public class StudentMapsActivity extends AppCompatActivity implements OnMapReady
 
                         etaLocation = new LatLng(mLastKnownLocation.getLatitude(), mLastKnownLocation.getLongitude());
                         mMap.addMarker(new MarkerOptions().position(etaLocation));
-                        Toast.makeText(StudentMapsActivity.this, "Requesting...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PasajeroMapsActivity.this, "Requesting...", Toast.LENGTH_SHORT).show();
 
                         int busNo = prefs.getInt(getString(R.string.bus_no), 0);
                         if (busNo==0){
-                            Toast.makeText(StudentMapsActivity.this, "Please add your bus no first in settings!", Toast.LENGTH_LONG).show();
+                            Toast.makeText(PasajeroMapsActivity.this, "Please add your bus no first in settings!", Toast.LENGTH_LONG).show();
                             break;
                         }
                         DatabaseReference busRef = FirebaseDatabase.getInstance().getReference().child("Buses").child(String.valueOf(busNo));
@@ -322,7 +322,7 @@ public class StudentMapsActivity extends AppCompatActivity implements OnMapReady
 
                     case R.id.link_bus:
 
-                        AlertDialog.Builder metadialogBuilder = new AlertDialog.Builder(StudentMapsActivity.this);
+                        AlertDialog.Builder metadialogBuilder = new AlertDialog.Builder(PasajeroMapsActivity.this);
                         metadialogBuilder.setTitle(getString(R.string.selectBusTitle))
                                 .setItems(R.array.bus_numbers, new DialogInterface.OnClickListener() {
                                     @Override
@@ -362,7 +362,7 @@ public class StudentMapsActivity extends AppCompatActivity implements OnMapReady
                         editor.remove(getString(R.string.bus_no));
                         editor.commit();
 
-                        Intent intent = new Intent(StudentMapsActivity.this, activity_login.class);
+                        Intent intent = new Intent(PasajeroMapsActivity.this, activity_login.class);
                         startActivity(intent);
                         finish();
                         break;
